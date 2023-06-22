@@ -1,0 +1,63 @@
+.navbar {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.09), 0 1px 6px rgba(0, 0, 0, 0.09);
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+}
+
+/* .menu {
+    border-radius: 0.5rem;
+    background: #ffffff;
+    margin: 0px 2px 0px 0px;
+    padding: 10px 50px 50px 50px;
+    position: absolute;
+    will-change: transform;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(-220px, 0px, 0px);
+    z-index: 10000;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.09), 0 1px 6px rgba(0, 0, 0, 0.09);
+} */
+
+.dropdown{
+    background-color: #fff;
+}
+
+.menu-icon-grid {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    background-color: #fff; /* Set the desired background color for each column */
+    text-align: center;
+  }
+  
+  .column a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 18px 12px;
+    color: #52495a;
+    text-decoration: none;
+  }
+  
+  .column a:hover {
+    background-color: #5aab40;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+  

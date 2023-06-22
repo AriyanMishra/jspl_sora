@@ -1,0 +1,147 @@
+.container {
+    display: block;
+    position: fixed;
+    height: 98.5vh;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    margin: 5px;
+    border-radius: 10px;
+    width: 264px;
+    background: linear-gradient(45deg, #59ab40, #ffa355);
+  }
+  
+  .logo {
+    width: 165px;
+    margin-top: 1.5rem;
+    margin-left: 2.7rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .icon {
+    margin-right: 10px; /* Adjust the margin as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    margin: 2rem 0;
+    display: grid;
+    gap: 0.6rem;
+
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: 10px;
+    padding: 0 1.35rem;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    justify-items: start;
+    height: 2.5rem;
+    align-items: center;
+    color: #fff;
+    border-radius: 5rem;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+  
+.submenu-arrow {
+  /* Add styles for submenu arrow */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+  .item h3 {
+
+    margin: 0; /* Remove default margin */
+    display: flex;
+    text-align: left;
+    align-items: center; /* Adjust the text alignment as needed */
+    flex: 1;
+    font-size: 12px;
+  }
+
+  .item:hover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(215, 252, 204, 0.25);
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+  
+  .item.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(215, 252, 204, 0.25);
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+  
+  .submenu {
+    background-color: transparent;
+    margin-top: -42px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .submenu-item {
+    font-size: 12px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 3rem;
+    padding-left: 10px;
+    margin-top: 10px;
+    align-items: center;
+    color: #fff;
+    border-radius: 5rem;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+  }
+  
+  .submenu-item:hover {
+    background-color: rgb(215, 252, 204, 0.25);
+    width: 232.5px;
+    height: 50px;
+    color: #ffffff;
+    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+
+  .submenu-item.active {
+    background-color: rgb(215, 252, 204, 0.25);
+    width: 232.5px;
+    height: 50px;
+    color: #ffffff;
+    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+  
