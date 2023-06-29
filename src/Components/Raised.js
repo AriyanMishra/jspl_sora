@@ -3,7 +3,7 @@ import "./Table.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function SafetyObs() {
+function Raised() {
   const [activeTable, setActiveTable] = useState("table1");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -62,7 +62,7 @@ function SafetyObs() {
   return (
     <div className="Heading" style={{marginTop:"20px"}}>
         <h3>
-            Safety Observation(PIOs)
+            My Raised Observation
         </h3>
         <hr
           style={{
@@ -225,4 +225,4 @@ function SafetyObs() {
   );
 }
 
-export default SafetyObs;
+export default Raised;

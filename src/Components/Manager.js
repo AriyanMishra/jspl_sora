@@ -3,7 +3,7 @@ import "./Table.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function SafetyObs() {
+function Manager() {
   const [activeTable, setActiveTable] = useState("table1");
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -62,7 +62,7 @@ function SafetyObs() {
   return (
     <div className="Heading" style={{marginTop:"20px"}}>
         <h3>
-            Safety Observation(PIOs)
+            Line Manager Master
         </h3>
         <hr
           style={{
@@ -71,6 +71,17 @@ function SafetyObs() {
             marginTop: "20px",
           }}
         />
+
+        <div>
+        <span >
+          <h3 style={{marginTop:"30px"}}>
+            Form Table
+          </h3>
+        </span>
+        </div>
+
+
+        
     <div className="card" style={cardPIOs4}>
     <div className="tables-container" style={{marginTop:"10px", marginBottom:"25px", marginRight:"30px"}}>
       <div className="tables">
@@ -225,4 +236,4 @@ function SafetyObs() {
   );
 }
 
-export default SafetyObs;
+export default Manager;

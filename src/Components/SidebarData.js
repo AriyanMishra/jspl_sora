@@ -21,13 +21,13 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Safety Observation (PIOs)',
-        path: '',
+        path: '/Safety',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav',
       },
       {
         title: 'Line Walk (Individual Audit)',
-        path: '/line-walk-audit',
+        path: '/Line',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav',
       },
@@ -70,7 +70,7 @@ export const SidebarData = [
   },
   {
     title: 'My Raised Observation',
-    path: '/my-raised-observation',
+    path: '/Raised',
     icon: <IoIcons.IoIosPaper />,
   },
   {
@@ -83,7 +83,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Line Manager Master',
-        path: '/line-manager-master',
+        path: '/Manager',
         icon: <IoIcons.IoIosPaper />,
       },
     ],

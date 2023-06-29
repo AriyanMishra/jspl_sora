@@ -1,0 +1,177 @@
+  .tables-container {
+    border: 1px solid #5aab40;
+    border-radius: 0.5rem;
+    padding: 10px;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+  
+  .tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem; 
+  }
+  
+  .table-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 1px solid #5aab40;
+    border-radius: 0.5rem;
+  }
+  
+  .table-heading h2 {
+    font-size: 0.9rem;
+    margin: 1rem;
+  }
+  
+  
+  .table-heading:hover {
+    background-color: #5aab40;
+    color: #fff;
+    transition: 0.3ms;
+    -webkit-transition: 0.3ms;
+    -moz-transition: 0.3ms;
+    -ms-transition: 0.3ms;
+    -o-transition: 0.3ms;
+}
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-top: 40px;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #dddddda8;
+    font-weight: bold;
+  }
+  
+  
+  .table-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table-buttons button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 0px transparent;
+  }
+  
+  .table-buttons button:hover {
+    box-shadow: rgb(37, 37, 37) 0px 8px 10px 0px, rgb(37, 37, 37) 0px 0px 0px 1px;
+    transition: 0.3s;
+    border: 0px transparent;
+    
+  }
+  
+  .table-buttons .copy-button {
+    background-color: #003473;
+    color: #fff;
+  }
+  
+  .table-buttons .csv-button {
+    background-color: #003473;
+    color: #fff;
+  }
+  
+  .table-buttons .excel-button {
+    background-color: #003473;
+    color: #ffffff;
+  }
+  
+  .table-buttons .pdf-button {
+    background-color: #003473;
+    color: #fff;
+  }
+  
+  .table-buttons .print-button {
+    background-color: #003473;
+    color: #fff;
+  }
+  
+  .buttons-date{
+    display: flex;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .date-range-picker {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .date-range-picker label {
+    font-size: 1rem;
+  }
+  
+  .date-range-picker input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  .entries-search{
+      display: flex;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+    }
+  
+    .pagination{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+    }
+  
+    .pagination button{
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      border: 0px transparent;
+      -webkit-border-radius: 0.25rem;
+      -moz-border-radius: 0.25rem;
+      -ms-border-radius: 0.25rem;
+      -o-border-radius: 0.25rem;
+}
+    .pagination button:hover{
+      box-shadow: rgb(37, 37, 37) 0px 8px 10px 0px, rgb(37, 37, 37) 0px 0px 0px 1px;
+      transition: 0.3s;
+      border: 0px transparent;
+    }
+    .pagination button.active{
+      background-color: #5aab40;
+      color: #fff;
+    }
