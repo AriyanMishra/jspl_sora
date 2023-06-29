@@ -3,8 +3,8 @@ import './App.css';
 import { Routes, Route} from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
-import Employees from "./Components/Employees";
-import Home from "./Components/Home";
+import Safety from "./Components/Safety";
+import Dashboard from "./Components/Dashboard";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
 
         <div>
           <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/employees" element={<Employees />} />
+            <Route path="/" exact element={<Dashboard />} />
+            <Route path="/Safety" element={<Safety />} />
           </Routes>
         </div>
       </div>

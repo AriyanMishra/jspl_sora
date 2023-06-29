@@ -28,21 +28,21 @@ export const options = {
     },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 export const data = {
   labels ,
   datasets: [
     {
-      label: "Sales",
-      data:[10,22, 35 ,58, 40,60, 45],
-      backgroundColor: "#04e474",
-      borderRadius: 25,
+      label: "Total Cases",
+      data:[80, 40, 100, 100, 80, 100, 60, 80, 100, 60, 100, 100],
+      backgroundColor: "#FF8F23",
+      borderRadius: 5,
     },
     {
-      label: "Revenue",
-      data:[20,15, 45 ,57, 65,44, 59],
-      backgroundColor: "#fc5c9c",
-      borderRadius: 25,
+      label: "Resolved Cases",
+      data:[60, 20, 80, 60, 40, 40, 40, 60, 60, 40, 40, 20],
+      backgroundColor: "#61BC46",
+      borderRadius: 5,
     },
   ],
 } 
@@ -51,7 +51,7 @@ export const data = {
 const VerticalBarChart = () => {
   return (
     <div className="chart">
-      <h2>Vertical Bar Chart</h2>
+      <h2 style={{fontFamily: "sans-serif", fontSize: "16px", fontStyle:"light"}}>Year Wise PIOs Review ( Angul-All Department )</h2>
       <Bar options={options} data={data}/>
     </div>
   )

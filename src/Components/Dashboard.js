@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./Dashboard.css";
 import pending from "../images/pending.png";
 import year from "../images/year.png";
 import month from "../images/month.png";
@@ -9,6 +9,9 @@ import pending2 from "../images/pending-light.png";
 import year2 from "../images/year-light.png";
 import month2 from "../images/month-light.png";
 import today2 from "../images/today-light.png";
+import VerticalBarChart from "../Charts/VerticalBarChart";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const dashboardStart = {
@@ -326,6 +329,45 @@ const Home = () => {
     paddingTop: "10px",
   };
 
+  const cardPIOs4 = {
+    marginTop: "30px",
+    paddingTop: "20px",
+    paddingBottom: "5px",
+    borderRadius: "10px",
+    background: "#fff",
+    width: "Auto",
+    paddingLeft: "30px",
+    boxShadow: "0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08)",
+  };
+
+  const pios5_Button = {
+    width: "200px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignContent: "center",
+    color: "#ffffff",
+    background: "#61bc46",
+    fontSize: "14px",
+    border: "none",
+    height: "40px",
+    borderRadius: "10px",
+  };
+
+  const pios6_Button = {
+    width: "130px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignContent: "center",
+    color: "#ffffff",
+    background: "#61bc46",
+    fontSize: "14px",
+    border: "none",
+    height: "40px",
+    borderRadius: "10px",
+  };
+
   return (
     <div>
       <div className="header-part-right" style={dashboardStart}>
@@ -460,7 +502,7 @@ const Home = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  PIOs Summary ( My Raised Observations )
+                  PIOs Summary ( My Raised Observations ) <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
                 </button>
                 <div
                   className="dropdown-menu"
@@ -607,19 +649,12 @@ const Home = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Year: 2022
+                    Year: 2022 <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
                   </button>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                     x-placement="top-start"
-                    // style={{
-                    //   position: 'absolute',
-                    //   willChange: 'transform',
-                    //   top: '0px',
-                    //   left: '-190px',
-                    //   transform: 'translate3d(0px, -2px, 0px)',
-                    // }}
                   ></div>
                 </div>
                 <div className="row" style={rowPIOs}>
@@ -746,19 +781,12 @@ const Home = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Year: 2021
+                    Year: 2021 <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
                   </button>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                     x-placement="top-start"
-                    // style={{
-                    //   position: 'absolute',
-                    //   willChange: 'transform',
-                    //   top: '0px',
-                    //   left: '-190px',
-                    //   transform: 'translate3d(0px, -2px, 0px)',
-                    // }}
                   ></div>
                 </div>
                 <div className="row" style={rowPIOs}>
@@ -888,19 +916,12 @@ const Home = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Year: 2022
+                  Year: 2022 <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
                 </button>
                 <div
                   className="dropdown-menu"
                   aria-labelledby="dropdownMenuButton"
                   x-placement="top-start"
-                  // style={{
-                  //   position: 'absolute',
-                  //   willChange: 'transform',
-                  //   top: '0px',
-                  //   left: '-190px',
-                  //   transform: 'translate3d(0px, -2px, 0px)',
-                  // }}
                 ></div>
               </div>
               <div className="clearfix"></div>
@@ -1015,6 +1036,39 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="vertical-bar-chart">
+      <div className="card" style={cardPIOs4}>
+        <span className="dropdown pull-right"
+                  style={{ float: 'right', background: "transparent", marginTop: '0px', marginRight:'50px' }}>
+                  <button
+                    className="btn btn-primary dropdown-toggle"
+                    style={pios5_Button}
+                    id="dropdownMenuButton"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Angul-All Department <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
+                  </button>
+        </span>
+        <span className="dropdown pull-right"
+                  style={{ float: 'right', background: "transparent", marginTop: '0px', marginRight:'10px' }}>
+                  <button
+                    className="btn btn-primary dropdown-toggle"
+                    style={pios6_Button}
+                    id="dropdownMenuButton"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Year: 2022 <span style={{float:'right'}}><FontAwesomeIcon icon={faCaretDown}/></span>
+                  </button>
+        </span>
+        <VerticalBarChart />
+      </div>
       </div>
     </div>
   );

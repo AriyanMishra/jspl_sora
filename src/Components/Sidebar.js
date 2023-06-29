@@ -1,67 +1,60 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { menuItems } from '../data/dummy';
+import React from 'react';
+import styled from '@emotion/styled';
+import { SidebarData } from './SidebarData';
+import SubMenu from './SubMenu';
+import { IconContext } from 'react-icons/lib';
 import Logo from "../images/Jindal-logo-light.png"
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
-import './Sidebar.css';
+
+const SidebarNav = styled.nav`
+  display: block;
+  position: fixed;
+  height: 98.5vh;
+  overflow-y: auto;
+  left: 0;
+  top: 0;
+  margin: 5px;
+  border-radius: 10px;
+  width: 264px;
+  background: linear-gradient(45deg, #59ab40, #ffa355);
+`;
+
+
+const SidebarWrap = styled.div`
+  width: 100%;
+`;
+
+const LogoContainer = styled.div`
+  width: 165px;
+  margin-top: 1.5rem;
+  margin-left: 2.7rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+`;
+
+
+const LogoImage = styled.img`
+  height: 75px;
+`;
 
 const Sidebar = () => {
-  const [activeMenu, setActiveMenu] = useState('');
-  const location = useLocation();
-  const handleMenuClick = (name) => {
-    setActiveMenu(name);
-  };
-
-  const [expandedSubmenus] = useState([]);
-  const isSubMenuExpanded = (name) => {
-    return expandedSubmenus.includes(name);
-  };
 
   return (
-    <div className="container">
-      <div className="logo">
-      <img src={Logo} alt="" style={{height:'75px'}}/>
-      </div>
-
-      <div className="menu">
-        {menuItems.map((item) => (
-          <div
-            className={`item ${item.name === activeMenu ? 'active' : ''}`}
-            key={item.id}
-            onClick={() => handleMenuClick(item.name)}
-          >
-            {item.icon}
-            <h3>{item.title}</h3>
-            {item.submenu.length > 0 && (
-              <FontAwesomeIcon
-                icon={isSubMenuExpanded(item.name) ? faChevronUp : faChevronDown}
-                className="submenu-arrow"
-              />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {menuItems.map((item) =>
-        item.submenu.length > 0 && item.name === activeMenu ? (
-          <div className="submenu" key={item.id}>
-            {item.submenu.map((subItem) => (
-              <Link
-                to={`/${item.name}/${subItem.name}`}
-                key={subItem.id}
-                className={`submenu-item ${
-                  `/${item.name}/${subItem.name}` === location.pathname ? 'active' : ''
-                }`}
-              >
-                {subItem.icon}
-                <h3>{subItem.title}</h3>
-              </Link>
-            ))}
-          </div>
-        ) : null
-      )}
-    </div>
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <SidebarNav>
+          <SidebarWrap>
+            <LogoContainer>
+              <LogoImage src={Logo} alt="Logo" />
+            </LogoContainer>
+            {SidebarData.map((item, index) => {
+              return <SubMenu item={item} key={index} />;
+            })}
+          </SidebarWrap>
+        </SidebarNav>
+      </IconContext.Provider>
+    </>
   );
 };
 

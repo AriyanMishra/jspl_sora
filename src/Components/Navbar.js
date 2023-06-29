@@ -48,19 +48,6 @@ const Navbar = () => {
     }
   };
 
-
-  // const dashboardHeaderStyle = {
-  //   marginTop: '10px',        //padding: '20px',
-  //   display: 'flex',
-  //   height: '64px',
-  //   overflowY: 'auto',
-  //   borderRadius: '5px',
-  //   width: '100%',
-  //   background: '#ffffff',
-  //   boxShadow: '0 1px 15px rgba(0, 0, 0, 0.09), 0 1px 6px rgba(0, 0, 0, 0.09)',
-  // };
-
-
   const headerIcon = {
     marginTop: "-5px",
     marginRight: "10px",
@@ -158,13 +145,6 @@ const Navbar = () => {
             style={headerIcon}
           />
             {isCollapsed && (
-
-              // <span className='dropdown' style={menu}>
-              //   <span className='menu-icon-grid' style={aStyle1}>
-              //     <a href="logout.jsx" style={aStyle2}><FontAwesomeIcon icon={faArrowRightFromBracket} aria-hidden="true" />Logout</a>
-              //     <a href="profile.jsx" style={aStyle3}><FontAwesomeIcon icon={faUserCheck} aria-hidden="true"/> Profile</a>
-              //   </span>
-              // </span>
 
               <span className='dropdown' style={menu}>
               <span className='menu-icon-grid' style={aStyle1}>
