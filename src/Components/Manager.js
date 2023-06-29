@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Table.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import FormManager from "./FormManager";
 
 function Manager() {
   const [activeTable, setActiveTable] = useState("table1");
@@ -72,12 +73,8 @@ function Manager() {
           }}
         />
 
-        <div>
-        <span >
-          <h3 style={{marginTop:"30px"}}>
-            Form Table
-          </h3>
-        </span>
+        <div className="form" style={cardPIOs4}>
+          <FormManager />
         </div>
 
 
